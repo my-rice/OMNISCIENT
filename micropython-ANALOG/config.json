@@ -1,0 +1,11 @@
+{
+  "period_ms": 5000,
+  "led_on_time_ms": 1000,
+  "ssid": "Home 1",
+  "password": "password",
+  "mqtt_server": "stpo0y.stackhero-network.com",
+  "mqtt_user": "admin",
+  "mqtt_password": "password",
+  "topic_pub": "OMNISCIENT",
+  "type_SENSOR": "LIGHT"
+}

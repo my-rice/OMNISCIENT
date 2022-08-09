@@ -1,0 +1,30 @@
+PODS:
+  - Charts (3.5.0):
+    - Charts/Core (= 3.5.0)
+  - Charts/Core (3.5.0)
+  - GaugeKit (0.5.1)
+  - MobileVLCKit (3.3.17)
+  - Starscream (4.0.4)
+
+DEPENDENCIES:
+  - Charts
+  - GaugeKit
+  - MobileVLCKit (~> 3.3.0)
+  - Starscream (~> 4.0.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Charts
+    - GaugeKit
+    - MobileVLCKit
+    - Starscream
+
+SPEC CHECKSUMS:
+  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
+  GaugeKit: b09f41f141511c172a606403e71adf8e9b6008b3
+  MobileVLCKit: c5dd1b0ae933dc9c2348099840e753496dcdd908
+  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
+
+PODFILE CHECKSUM: 3b30cd28bca2adf93d2b4c0eee1b7610d3ac85ac
+
+COCOAPODS: 1.11.3

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Actuator" representedClassName="Actuator" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <attribute name="remoteID" attributeType="String"/>
+        <attribute name="type" attributeType="String"/>
+    </entity>
+    <entity name="Camera" representedClassName="Camera" syncable="YES" codeGenerationType="class">
+        <attribute name="domain" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="port" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="Binary"/>
+        <attribute name="thumbnailDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="composition" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Room" inverseName="composition" inverseEntity="Room"/>
+    </entity>
+    <entity name="Room" representedClassName="Room" syncable="YES" codeGenerationType="class">
+        <attribute name="colorAlpha" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="colorBlue" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="colorGreen" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="colorRed" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="hasImage" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="composition" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Camera" inverseName="composition" inverseEntity="Camera"/>
+        <relationship name="sensors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sensor" inverseName="room" inverseEntity="Sensor"/>
+    </entity>
+    <entity name="Sensor" representedClassName="Sensor" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <attribute name="remoteID" attributeType="String"/>
+        <attribute name="type" attributeType="String"/>
+        <relationship name="room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="sensors" inverseEntity="Room"/>
+    </entity>
+    <elements>
+        <element name="Camera" positionX="-63" positionY="-18" width="128" height="149"/>
+        <element name="Room" positionX="-54" positionY="-9" width="128" height="164"/>
+        <element name="Sensor" positionX="-54" positionY="36" width="128" height="89"/>
+        <element name="Actuator" positionX="-54" positionY="63" width="128" height="74"/>
+    </elements>
+</model>
